@@ -7,17 +7,12 @@ using System.Threading.Tasks;
 
 namespace TestApplicationInputStringSubstringCount
 {
-    public class ComputationSimple
+    public static class ComputationSimple
     {
         //This is the simplest solution i could come up with, it is two embedded for loops, one finds the string, and
         //the other for loop finds the amount of times it shows up
         // I added this one in because this was what i started to get my problem solving solutions pumping. I knew this one would be the worst performing,
         // However i needed to write this one so that i could come up with the next two, so that i could solve a different problem, which was trying to make it perform better.
-
-        public ComputationSimple()
-        {
-            
-        }
 
         public void ComputeSimple(string inputString, int inputLength)
         {

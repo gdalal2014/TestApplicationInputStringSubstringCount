@@ -1,15 +1,11 @@
 ﻿namespace TestApplicationInputStringSubstringCount
 {
-    public class ComputationEasy
+    public static class ComputationEasy
     {
         //This one is a simple one because the Dictionary is very easy to use and the value can be updated very easily
         //As find the key in the dictionary is an easy thing to do. Also we don't have to worry about repetition and adding
         //multiple values of the same string because the key is unique
 
-        public ComputationEasy()
-        {
-            
-        }
         public static void Compute(string inputString, int inputLength)
         {
             Dictionary<string, int> substringsPresent = new Dictionary<string, int>();

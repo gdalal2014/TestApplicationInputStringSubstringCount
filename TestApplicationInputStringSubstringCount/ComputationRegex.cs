@@ -13,12 +13,12 @@ namespace TestApplicationInputStringSubstringCount
         {
             
         }
-        public void computeUsingRegex(string inputString, int inputLength)
+        public static void ComputeUsingRegex(string inputString, int inputLength)
         {
-            ArrayList alreadySearched = new ArrayList();
+            var alreadySearched = new ArrayList();
             for (int i = 0; i < inputString.Length; i++)
             {
-                if (inputString.Substring(i).Length >= inputLength)
+                if (inputString[i..].Length >= inputLength)
                 {
 
                     string subInputString = inputString.Substring(i, inputLength);
@@ -28,7 +28,7 @@ namespace TestApplicationInputStringSubstringCount
                         int frequencyValue = Regex.Matches(inputString, subInputString).Count;
 
                         alreadySearched.Add(subInputString);
-                        Console.WriteLine("String: " + subInputString.ToString() + " has: " + frequencyValue.ToString() + " Repetitions");
+                        Console.WriteLine($"String: {subInputString}  has: {frequencyValue} Repetitions");
                     }
                     else
                     {

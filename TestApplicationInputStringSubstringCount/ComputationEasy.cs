@@ -10,12 +10,12 @@
         {
             
         }
-        public void compute(string inputString, int inputLength)
+        public static void Compute(string inputString, int inputLength)
         {
             Dictionary<string, int> substringsPresent = new Dictionary<string, int>();
             for (int i = 0; i < inputString.Length; i++)
             {
-                if (inputString.Substring(i).Length >= inputLength)
+                if (inputString[i..].Length >= inputLength)
                 {
                     string subInputString = inputString.Substring(i, inputLength);
                     if (!substringsPresent.ContainsKey(subInputString))
@@ -44,7 +44,7 @@
             {
                 string keyValue = item.Key;
                 int intValue = item.Value;
-                Console.WriteLine("String: " + keyValue.ToString() + " has: " + intValue.ToString() + " Repetitions");
+                Console.WriteLine($"String: {keyValue} has: {intValue} Repetitions");
             }
 
         }

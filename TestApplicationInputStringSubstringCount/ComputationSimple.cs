@@ -19,12 +19,12 @@ namespace TestApplicationInputStringSubstringCount
             
         }
 
-        public static void computeSimple(string inputString, int inputLength)
+        public void ComputeSimple(string inputString, int inputLength)
         {
             string substringToFind = string.Empty;
             string substringToCompare = string.Empty;
             int howManyReps = 0;
-            ArrayList alreadySearched = new ArrayList();
+            var alreadySearched = new ArrayList();
 
             for (int i = 0; i < inputString.Length; i++)
             {
@@ -57,7 +57,7 @@ namespace TestApplicationInputStringSubstringCount
                     }
                     if (!alreadySearched.Contains(inputString.Substring(i, inputLength)))
                     {
-                        Console.WriteLine("String: " + substringToFind.ToString() + " has: " + howManyReps.ToString() + " Repetitions");
+                        Console.WriteLine($"String: {substringToFind} has: {howManyReps} Repetitions");
                     }
 
                     if (alreadySearched.Count > 0)

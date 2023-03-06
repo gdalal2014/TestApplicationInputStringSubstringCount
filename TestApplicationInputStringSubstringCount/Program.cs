@@ -57,14 +57,14 @@ namespace TestApplicationInputStringSubstringCount
                 }
             }
 
-            ComputationEasy computeValues = new ComputationEasy();
-            computeValues.compute(inputString, inputInteger);
+            var computeValues = new ComputationEasy();
+            ComputationEasy.Compute(inputString, inputInteger);
             Console.WriteLine("");
-            computationRegex computeRegex = new computationRegex();
-            computeRegex.computeUsingRegex(inputString, inputInteger);
+            var computeRegex = new computationRegex();
+            computationRegex.ComputeUsingRegex(inputString, inputInteger);
             Console.WriteLine("");
-            //ComputationSimple computeValuesSimple = new ComputationSimple(); //This one takes the most memory and if the string is long it might not work
-            //computeValuesSimple.computeSimple(inputString, inputInteger); 
+            var computeValuesSimple = new ComputationSimple(); //This one takes the most memory and if the string is long it might not work
+            computeValuesSimple.ComputeSimple(inputString, inputInteger); 
 
         }
     }
